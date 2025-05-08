@@ -1,0 +1,13 @@
+trigger:
+  branches:
+    include:
+    - master # Or any branch you want to track
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- checkout: self
+
+- script: echo "Code pushed to GitHub. Triggered Azure Pipeline!"
+  displayName: 'Run a simple script'
